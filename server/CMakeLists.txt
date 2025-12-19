@@ -81,12 +81,3 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
     "${CMAKE_SOURCE_DIR}/resources"
     "$<TARGET_FILE_DIR:${PROJECT_NAME}>/resources"
 )
-
-# Print build info
-message(STATUS "Build output will be in: ${CMAKE_BINARY_DIR}/bin")
-message(STATUS "SFML root: ${SFML_ROOT}")
-message(STATUS "Box2D root: ${BOX2D_ROOT}")
-message(STATUS "Found resource files:")
-foreach(resource ${RESOURCE_FILES})
-    message(STATUS "  ${resource}")
-endforeach()
